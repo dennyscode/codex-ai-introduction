@@ -11,11 +11,10 @@ function loader(element) {
   loadInterval = setInterval(() => {
     element.textContent += '.'
 
-    if (element.textConten
-      t === '....') {
-    element.textContent = '';
-  }
-}, 300)
+    if (element.textContent === '....') {
+      element.textContent = '';
+    }
+  }, 300)
 }
 
 function typeText(element, text) {
@@ -75,7 +74,7 @@ const handleSubmit = async (e) => {
 
   // fetch data from server --> bot´s response
 
-  const response = await fetch('http://localhost:5000', {
+  const response = await fetch('https://codex-xzj6.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
